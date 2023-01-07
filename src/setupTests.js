@@ -5,8 +5,9 @@
 import '@testing-library/jest-dom';
 
 ////////My Testing using MSW///////
-import { setupServer } from 'msw/node'
-import { handlers } from './tests/utils'
+import { setupServer } from 'msw/node';
+import { handlers } from './tests/utils';
+import { setLogger } from 'react-query';
 
 export const server = setupServer(...handlers)
 
@@ -16,4 +17,11 @@ beforeAll(() => server.listen())
 // so they don't affect other tests.
 afterEach(() => server.resetHandlers())
 // Clean up after the tests are finished.
-afterAll(() => server.close())
+afterAll(() => server.close());
+
+//silence react-query errors
+setLogger({
+  log: console.log,
+  warn: console.warn,
+  error: ()=>{},
+});

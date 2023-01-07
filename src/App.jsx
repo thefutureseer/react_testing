@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import GetUserTest from './components/getUserTest/getUser';
+import GetUserTest from './components/getUserTest/GetUserTest';
 
 const queryClient = new QueryClient();
 

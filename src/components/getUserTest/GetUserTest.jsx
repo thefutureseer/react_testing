@@ -2,7 +2,7 @@ import React from 'react'
 import useUser from '../../query-hooks-test/useUser';
 
 export default function GetUserTest() {
-  const user = useUser(5);
+  const user = useUser(4);
   console.log(user)
   return (
     <div>
