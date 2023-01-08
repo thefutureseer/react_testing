@@ -2,6 +2,7 @@
 import './App.css';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import GetUserTest from './components/getUserTest/GetUserTest';
+import SetUser from './components/setUser/SetUser';
 
 const queryClient = new QueryClient();
 
@@ -10,6 +11,7 @@ function App() {
     <div className="App">
       <QueryClientProvider client={queryClient}>
        <GetUserTest/> 
+       <SetUser/>
       </QueryClientProvider>
       
     </div>
