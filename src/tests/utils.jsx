@@ -16,6 +16,18 @@ export const handlers = [
             })
         )
     }
+ ),
+
+rest.post(
+    '*/users',
+    (req, res, ctx) => {
+        return res(
+            ctx.status(200),
+            ctx.json({
+                name: "Doe Doe"
+            })
+        )
+    }
  )
 ]
 

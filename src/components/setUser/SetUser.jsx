@@ -5,9 +5,10 @@ export default function SetUser() {
   const mutation = useCreateUser()
   return (
     <div>
-     <button type="button" onClick={() => {
-      //  console.log("mutation.mutate.data.name " + mutation.mutate.data.name)
-       mutation.mutate({ name: "Mike Doe", age: 50 }) }}>Mutation</button>
+     <button 
+       type="button" 
+       onClick={() => { mutation.mutate({ name: "Mike Doe", age: 50 })}
+        }>Mutate</button>
     
      {mutation.isError && <p>Could not create user....</p>}
 
